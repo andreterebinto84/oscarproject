@@ -1,0 +1,57 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:fb="sap.ui.comp.filterbar"
+>
+
+    <fb:FilterBar id="filterbar" persistencyKey="myPersKey" useToolbar="false"
+        search=".onSearch" clear=".clearFilters" showClearOnFB="true">
+        <fb:filterGroupItems>
+            <fb:FilterGroupItem name="actor_ID" label="{i18n>lblActor}" groupName="Group1"
+                visibleInFilterBar="true">
+                <fb:control>
+                    <MultiComboBox
+                        name="Actor"
+                        selectionChange=".onSelectionChange"
+                        items="{
+												path: '/Actors',
+												templateShareable: true
+											}"
+                    >
+                        <core:Item key="{ID}" text="{name}" />
+                    </MultiComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem name="film_ID" label="{i18n>lblMovie}" groupName="Group1"
+                visibleInFilterBar="true">
+                <fb:control>
+                    <MultiComboBox
+                        name="title"
+                        selectionChange=".onSelectionChange"
+                        items="{
+												path: '/Films',
+												templateShareable: true
+											}"
+                    >
+                        <core:Item key="{ID}" text="{title}" />
+                    </MultiComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem name="category_ID" label="{i18n>lblAward}"
+                groupName="Group1" visibleInFilterBar="true">
+                <fb:control>
+                    <MultiComboBox
+                        name="name"
+                        selectionChange=".onSelectionChange"
+                        items="{
+												path: '/Categories',
+												templateShareable: true
+											}"
+                    >
+                        <core:Item key="{ID}" text="{name}" />
+                    </MultiComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+        </fb:filterGroupItems>
+    </fb:FilterBar>
+</core:FragmentDefinition>

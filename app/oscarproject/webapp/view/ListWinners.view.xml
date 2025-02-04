@@ -1,0 +1,89 @@
+<mvc:View
+    controllerName="oscarproject.controller.ListWinners"
+    height="100%"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:fb="sap.ui.comp.filterbar">
+    <f:DynamicPage headerExpanded="true">
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title
+                        id="_IDGenTitle"
+                        text="{i18n>title}"
+                        wrapping="true"
+                        class="sapUiSmallMarginEnd"
+                    />
+                </f:heading>
+                <f:actions>
+                    <ToolbarSpacer />
+                    <Button
+                        icon="sap-icon://add"
+                        type="Emphasized"
+                        text="{i18n>btnNewAward}"
+                        press="_onAddPress"
+                        id="addAwardsBtn"
+                    />
+                </f:actions>
+
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:header>
+            <f:DynamicPageHeader>
+                <f:content>
+                    <core:Fragment
+                        fragmentName="oscarproject.view.fragments.Filters"
+                        type="XML"
+                    />
+
+
+                </f:content>
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+            <Table
+                id="table"
+                 growing="true"
+                growingThreshold="50"
+                growingScrollToLoad="true"
+                fixedLayout="false"
+                sticky="HeaderToolbar,ColumnHeaders"
+                alternateRowColors="true"
+                items="{
+						path: '/Awards',
+                        parameters: {
+								$expand: 'actor,film,category'
+							}
+					}"
+            >
+                <columns>
+                    <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Text text="{i18n>lblActor}" />
+                    </Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Text text="{i18n>lblMovie}" />
+                    </Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Text text="{i18n>lblAward}" />
+                    </Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Text text="{i18n>lblAwardYear}" />
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem type="Active" vAlign="Middle" press="_onEditPress">
+                        <cells>
+                            <Text text="{actor/name}" />
+                            <Text text="{film/title}" />
+                            <Text text="{category/name}" />
+                            <Text text="{path:'year',type:'sap.ui.model.type.Integer'}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

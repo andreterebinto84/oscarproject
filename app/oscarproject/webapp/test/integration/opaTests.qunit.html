@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:microchart="sap.suite.ui.microchart">
+<head>
+	<title>Integration tests for Fiori</title>
+	<meta charset="utf-8">
+
+	<script id="sap-ui-bootstrap"
+		src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+		data-sap-ui-theme='sap_fiori_3'
+		data-sap-ui-resourceroots='{
+			"oscarproject": "../../"
+		}'
+		data-sap-ui-animation="false"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-libs="sap.m,sap.suite.ui.microchart"
+		data-sap-ui-async="true">
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="https://sapui5.hana.ondemand.com/resources/sap/ui/thirdparty/qunit-2.css">
+
+	<script src="https://sapui5.hana.ondemand.com/resources/sap/ui/thirdparty/qunit-2.js"></script>
+	<script src="https://sapui5.hana.ondemand.com/resources/sap/ui/qunit/qunit-junit.js"></script>
+
+	<script src="opaTests.qunit.js"></script>
+
+</head>
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+</body>
+</html>

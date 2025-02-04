@@ -1,0 +1,73 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	<VBox class="sapUiSmallMargin">
+		<f:Form id="FormChange354"
+			editable="true" title="{i18n>titleCreateAward}">
+			
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="2"
+					labelSpanL="2"
+					labelSpanM="3"
+					labelSpanS="12"
+					adjustLabelSpan="true"
+					emptySpanXL="2"
+					emptySpanL="2"
+					emptySpanM="4"
+					emptySpanS="0"
+					columnsXL="1"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="true" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer>
+					<f:formElements>
+						<f:FormElement label="{i18n>lblActorActress}">
+							<f:fields>
+								<Select
+                                 required="true"
+                                    forceSelection="false"
+                                    selectedKey="{FormObjectModel>/actor_ID}"
+                                    items="{
+                                        path: '/Actors'
+                                    }">
+                                    <core:Item key="{ID}" text="{name}" />
+                                </Select>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>lblMovie}">
+							<f:fields>
+									<Select
+                                     required="true"
+                                    forceSelection="false"
+                                    selectedKey="{FormObjectModel>/film_ID}"
+                                    items="{
+                                        path: '/Films'
+                                    }">
+                                    <core:Item key="{ID}" text="{title}" />
+                                </Select>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>lblAward}">
+							<f:fields>
+								<Select
+                                 required="true"
+                                    forceSelection="false"
+                                    selectedKey="{FormObjectModel>/category_ID}"
+                                    items="{
+                                        path: '/Categories'
+                                    }">
+                                    <core:Item key="{ID}" text="{name}" />
+                                </Select>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+	</VBox>
+</core:FragmentDefinition>
