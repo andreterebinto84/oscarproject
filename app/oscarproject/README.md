@@ -105,35 +105,34 @@ Link 2 Unit Tests
 
 ## User Tests
 
-- Acessar o link
+- Access the link
 [Application](http://localhost:4004/oscarproject/index.html)
 
-Ao acessar a aplicação é possivel verificar a lista de ganhadores, onde essa lista pode ser filtrada:
+When accessing the application, it is possible to check the list of winners, where this list can be filtered:
 
 ![Filter](../../docs/images/sap/print1.png)
 
-E ao clicar em Go o filtro é selecionado e a lista é filtrada
+And when you click on Go the filter is selected and the list is filtered
 
 ![FilterList](../../docs/images/sap/print2.png)
 
-Selecionando o item clicando em cima dele na tabela você será enviado para a página de edição do item, onde é possível editar o cadastro.
+By selecting the item by clicking on it in the table, you will be sent to the item editing page, where you can edit the registration.
 
 ![Edit](../../docs/images/sap/print3.png)
 
-E após a edição dos itens é possível clicar no botão save, e com isso uma mensagem de sucesso vai aparecer e após a mensagem você é redirecionado para a lista novamente com os itens editados.
+And after editing the items, you can click on the save button, and a success message will appear and after the message you are redirected to the list again with the edited items.
 
 ![Success](../../docs/images/sap/print4.png)
 
-Também na tela de listagem existe um Botão no canto direito superior, chamado "New Award", onde clicando em cima dele você será redirecionado para a mesma tela de cadastro, porém agora para criar um novo registro.
+Also on the listing screen there is a button in the upper right corner, called "New Award", where by clicking on it you will be redirected to the same registration screen, but now to create a new record.
 
 ![AddReg](../../docs/images/sap/print5.png)
-
-Preenchendo os dados basta clicar no botão "New Award" e um novo registro será criado.
+Once you have filled in the details, simply click on the "New Award" button and a new record will be created.
 
 
 ![AddRegSucess](../../docs/images/sap/print6.png)
 
-E a lista já vai voltar e ser atualizada.
+And the list will come back and be updated.
 
 ![ListNew](../../docs/images/sap/print7.png)
 

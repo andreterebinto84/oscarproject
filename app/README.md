@@ -51,17 +51,17 @@ First, I created the project using the Fiori Open Generator tools. After the app
 
 I created a file to GET/SET the model globally in all the project files, called GlobalModel.js inside the /model folder. This allows me to set the model more easily.
 
-![GlobalModel](../../docs/images/sap/GlobalModel.png)
+![GlobalModel](../docs/images/sap/GlobalModel.png)
 
 After I opened the App.controller.js file, took the project's main model configured in Manifest.json and set it in GlobalModel.js.
 
 
-![AppController](../../docs/images/sap/AppController.png)
+![AppController](../docs/images/sap/AppController.png)
 
 
 The premise of the project was to list, create and edit the award data, for this I created a file called AwardModel.js, where within this file I standardized the update, create and get calls, thus the code is more organized and performant for better performance and support.
 
-![AwardModel](../../docs/images/sap/AwardModel.png)
+![AwardModel](../docs/images/sap/AwardModel.png)
 
 With the files to list the data, connect the model and other configurations done, I created the View and Controller files for listing the data and the form for creating and editing awards.
 
@@ -83,7 +83,7 @@ All View files were used with i18n with translations in English and Brazilian Po
 
 In the manifest.json file, I created the routes for the list views and forms
 
-![Manifest](../../docs/images/sap/manifestjson.png)
+![Manifest](../docs/images/sap/manifestjson.png)
 
 
 ## Opa5 Tests
@@ -92,49 +92,48 @@ I created 2 scenarios for unit tests that can be accessed via the Link
 
 [Application](http://localhost:4004/)
 
-![ApplicationTest](../../docs/images/sap/TestScreen.png)
+![ApplicationTest](../docs/images/sap/TestScreen.png)
 
 Link 1 Runner
 
-![TestRunner](../../docs/images/sap/TestRunner.png)
+![TestRunner](../docs/images/sap/TestRunner.png)
 
 Link 2 Unit Tests
 
-![TestRunner](../../docs/images/sap/UnitTests.png)
+![TestRunner](../docs/images/sap/UnitTests.png)
 
 
 ## User Tests
 
-- Acessar o link
+- Access the link
 [Application](http://localhost:4004/oscarproject/index.html)
 
-Ao acessar a aplicação é possivel verificar a lista de ganhadores, onde essa lista pode ser filtrada:
+When accessing the application, it is possible to check the list of winners, where this list can be filtered:
 
-![Filter](../../docs/images/sap/print1.png)
+![Filter](../docs/images/sap/print1.png)
 
-E ao clicar em Go o filtro é selecionado e a lista é filtrada
+And when you click on Go the filter is selected and the list is filtered
 
-![FilterList](../../docs/images/sap/print2.png)
+![FilterList](../docs/images/sap/print2.png)
 
-Selecionando o item clicando em cima dele na tabela você será enviado para a página de edição do item, onde é possível editar o cadastro.
+By selecting the item by clicking on it in the table, you will be sent to the item editing page, where you can edit the registration.
 
-![Edit](../../docs/images/sap/print3.png)
+![Edit](../docs/images/sap/print3.png)
 
-E após a edição dos itens é possível clicar no botão save, e com isso uma mensagem de sucesso vai aparecer e após a mensagem você é redirecionado para a lista novamente com os itens editados.
+And after editing the items, you can click on the save button, and a success message will appear and after the message you are redirected to the list again with the edited items.
 
-![Success](../../docs/images/sap/print4.png)
+![Success](../docs/images/sap/print4.png)
 
-Também na tela de listagem existe um Botão no canto direito superior, chamado "New Award", onde clicando em cima dele você será redirecionado para a mesma tela de cadastro, porém agora para criar um novo registro.
+Also on the listing screen there is a button in the upper right corner, called "New Award", where by clicking on it you will be redirected to the same registration screen, but now to create a new record.
 
-![AddReg](../../docs/images/sap/print5.png)
+![AddReg](../docs/images/sap/print5.png)
+Once you have filled in the details, simply click on the "New Award" button and a new record will be created.
 
-Preenchendo os dados basta clicar no botão "New Award" e um novo registro será criado.
 
+![AddRegSucess](../docs/images/sap/print6.png)
 
-![AddRegSucess](../../docs/images/sap/print6.png)
+And the list will come back and be updated.
 
-E a lista já vai voltar e ser atualizada.
-
-![ListNew](../../docs/images/sap/print7.png)
+![ListNew](../docs/images/sap/print7.png)
 
 
